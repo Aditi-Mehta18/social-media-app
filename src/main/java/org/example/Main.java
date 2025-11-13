@@ -3,8 +3,12 @@ package org.example;
 import org.example.model.*;
 import org.example.service.*;
 import org.bson.types.ObjectId;
+import org.example.dto.FeedItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Timestamp;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,45 +16,76 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
+
     static UserService userService = new UserService();
     static PostService postService = new PostService();
     static LikeService likeService = new LikeService();
     static CommentService commentService = new CommentService();
+    static FollowService followService = new FollowService();
+    static FeedService feedService = new FeedService();
+    static SearchService searchService = new SearchService();
 
-    // ✅ Correct variable name
     static User loggedInUser = null;
 
     public static void main(String[] args) throws Exception {
 
         while (true) {
-            System.out.println("\n=== SOCIAL MEDIA APP ===");
-            System.out.println("1. Register");
-            System.out.println("2. Login");
-            System.out.println("3. Create Post");
-            System.out.println("4. View Feed");
-            System.out.println("5. Like a Post");
-            System.out.println("6. Comment on Post");
-            System.out.println("7. Logout");
-            System.out.println("8. Exit");
-            System.out.print("Choose: ");
+            if (loggedInUser == null) {
+                log.info("\n=== SOCIAL MEDIA APP ===");
+                log.info("1. Register");
+                log.info("2. Login");
+                log.info("3. Exit");
+                System.out.print("Choose: ");
 
-            int ch = Integer.parseInt(sc.nextLine());
-
-            switch (ch) {
-                case 1 -> register();
-                case 2 -> login();
-                case 3 -> createPost();
-                case 4 -> viewFeed();
-                case 5 -> likePost();
-                case 6 -> commentOnPost();
-                case 7 -> logout();
-                case 8 -> System.exit(0);
-                default -> System.out.println("Invalid choice.");
+                int ch = Integer.parseInt(sc.nextLine());
+                switch (ch) {
+                    case 1 -> { register(); if (loggedInUser != null) authenticatedMenu(); }
+                    case 2 -> { login(); if (loggedInUser != null) authenticatedMenu(); }
+                    case 3 -> System.exit(0);
+                    default -> log.warn("Invalid choice.");
+                }
+            } else {
+                authenticatedMenu();
             }
         }
     }
 
-    // ------------------------------------------------------------
+    static void authenticatedMenu() {
+        while (loggedInUser != null) {
+            log.info("\n=== SOCIAL MEDIA APP ===");
+            log.info("Logged in as: {}", loggedInUser.getUsername());
+            log.info("1. Create Post");
+            log.info("2. View Feed (All Posts)");
+            log.info("3. Like a Post");
+            log.info("4. Comment on Post");
+            log.info("5. View Timeline (Followees)");
+            log.info("6. Follow a User");
+            log.info("7. Unfollow a User");
+            log.info("8. Search Users");
+            log.info("9. Search Posts");
+            log.info("10. View My Posts");
+            log.info("11. Logout");
+            System.out.print("Choose: ");
+
+            int ch = Integer.parseInt(sc.nextLine());
+            switch (ch) {
+                case 1 -> createPost();
+                case 2 -> viewFeed();
+                case 3 -> likePost();
+                case 4 -> commentOnPost();
+                case 5 -> MenuExtensions.viewTimeline(loggedInUser, feedService, likeService, commentService, sc);
+                case 6 -> MenuExtensions.followUser(loggedInUser, followService, sc);
+                case 7 -> MenuExtensions.unfollowUser(loggedInUser, followService, sc);
+                case 8 -> MenuExtensions.searchUsers(searchService, sc);
+                case 9 -> MenuExtensions.searchPosts(searchService, sc);
+                case 10 -> MenuExtensions.viewMyPosts(loggedInUser, postService, likeService, commentService, sc);
+                case 11 -> logout();
+                default -> log.warn("Invalid choice.");
+            }
+        }
+    }
+
 
     static void register() throws Exception {
         System.out.print("Username: ");
@@ -72,12 +107,13 @@ public class Main {
 
         boolean ok = userService.register(u, pass);
 
-        if (ok) System.out.println("Registered successfully.");
-        else System.out.println("User already exists (email/username).");
+        if (ok) {
+            log.info("Registered successfully. Please login from the main menu.");
+        } else {
+            log.warn("User already exists (email/username).");
+        }
     }
 
-
-    // ------------------------------------------------------------
 
     static void login() throws Exception {
         System.out.print("Email: ");
@@ -89,18 +125,19 @@ public class Main {
         User u = userService.login(email, pass);
 
         if (u == null) {
-            System.out.println("Invalid credentials.");
+            log.warn("Invalid credentials.");
         } else {
             loggedInUser = u;
-            System.out.println("Login successful. Welcome " + u.getFullName());
+            log.info("Login successful. Welcome {}", u.getFullName());
+            authenticatedMenu();
         }
     }
 
-    // ------------------------------------------------------------
+
 
     static void createPost() {
         if (loggedInUser == null) {
-            System.out.println("Please log in first.");
+            log.warn("Please log in first.");
             return;
         }
 
@@ -116,18 +153,17 @@ public class Main {
 
         postService.createPost(p);
 
-        System.out.println("Post created.");
+        log.info("Post created.");
     }
 
-    // ------------------------------------------------------------
 
     static void viewFeed() {
         List<Post> posts = postService.getAllPosts();
 
-        System.out.println("\n=== FEED ===");
+        log.info("\n=== FEED ===");
 
         if (posts.isEmpty()) {
-            System.out.println("No posts yet.");
+            log.info("No posts yet.");
             return;
         }
 
@@ -136,19 +172,18 @@ public class Main {
             long likeCount = likeService.countLikes(p.getId());
             List<Comment> comments = commentService.getComments(p.getId());
 
-            System.out.println("\nPost ID: " + p.getId());
-            System.out.println("User ID: " + p.getUserId());
-            System.out.println("Content: " + p.getContent());
-            System.out.println("Likes: " + likeCount);
-            System.out.println("Comments:");
+            log.info("\nPost ID: {}", p.getId());
+            log.info("User ID: {}", p.getUserId());
+            log.info("Content: {}", p.getContent());
+            log.info("Likes: {}", likeCount);
+            log.info("Comments:");
 
             for (Comment c : comments) {
-                System.out.println(" - (" + c.getUserId() + ") " + c.getText());
+                log.info(" - ({}) {}", c.getUserId(), c.getText());
             }
         }
     }
 
-    // ------------------------------------------------------------
 
     static void likePost() {
         if (loggedInUser == null) {
@@ -167,10 +202,8 @@ public class Main {
 
         likeService.addLike(like);
 
-        System.out.println("Liked.");
+        log.info("Liked.");
     }
-
-    // ------------------------------------------------------------
 
     static void commentOnPost() {
         if (loggedInUser == null) {
@@ -193,13 +226,12 @@ public class Main {
 
         commentService.addComment(c);
 
-        System.out.println("Comment added.");
+        log.info("Comment added.");
     }
 
-    // ------------------------------------------------------------
 
     static void logout() {
         loggedInUser = null;
-        System.out.println("Logged out.");
+        log.info("Logged out.");
     }
 }

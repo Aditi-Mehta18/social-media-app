@@ -5,7 +5,10 @@ import org.example.model.Profile;
 
 public class ProfileService {
 
-    private final ProfileDAO profileDAO = new ProfileDAO();
+    private final ProfileDAO profileDAO;
+
+    public ProfileService() { this.profileDAO = new ProfileDAO(); }
+    public ProfileService(ProfileDAO profileDAO) { this.profileDAO = profileDAO; }
 
     public boolean createProfile(Profile profile) throws Exception {
         return profileDAO.save(profile);

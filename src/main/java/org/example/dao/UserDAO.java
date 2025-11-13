@@ -4,6 +4,8 @@ import org.example.config.MySQLConnection;
 import org.example.model.User;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO {
 
@@ -57,6 +59,19 @@ public class UserDAO {
 
         ResultSet rs = ps.executeQuery();
         return rs.next() ? map(rs) : null;
+    }
+
+    public List<User> searchByQuery(String q, int limit) throws Exception {
+        String sql = "SELECT * FROM users WHERE username LIKE ? OR full_name LIKE ? ORDER BY user_id LIMIT ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        String like = "%" + q + "%";
+        ps.setString(1, like);
+        ps.setString(2, like);
+        ps.setInt(3, Math.max(1, limit));
+        List<User> list = new ArrayList<>();
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) list.add(map(rs));
+        return list;
     }
 
     private User map(ResultSet rs) throws Exception {

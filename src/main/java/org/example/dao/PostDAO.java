@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.in;
+import static com.mongodb.client.model.Sorts.descending;
+import static com.mongodb.client.model.Filters.text;
 
 public class PostDAO {
 
@@ -33,5 +36,23 @@ public class PostDAO {
 
     public Post findById(ObjectId id) {
         return collection.find(eq("_id", id)).first();
+    }
+
+    public List<Post> findByUserIds(List<Integer> userIds, int limit) {
+        List<Post> posts = new ArrayList<>();
+        if (userIds == null || userIds.isEmpty()) return posts;
+        var find = collection.find(in("userId", userIds)).sort(descending("createdAt"));
+        if (limit > 0) find.limit(limit);
+        find.into(posts);
+        return posts;
+    }
+
+    public List<Post> findByText(String query, int limit) {
+        List<Post> posts = new ArrayList<>();
+        if (query == null || query.isBlank()) return posts;
+        var find = collection.find(text(query)).sort(descending("createdAt"));
+        if (limit > 0) find.limit(limit);
+        find.into(posts);
+        return posts;
     }
 }

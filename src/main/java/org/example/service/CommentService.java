@@ -8,7 +8,10 @@ import java.util.List;
 
 public class CommentService {
 
-    private final CommentDAO commentDAO = new CommentDAO();
+    private final CommentDAO commentDAO;
+
+    public CommentService() { this.commentDAO = new CommentDAO(); }
+    public CommentService(CommentDAO commentDAO) { this.commentDAO = commentDAO; }
 
     public void addComment(Comment comment) {
         commentDAO.save(comment);
