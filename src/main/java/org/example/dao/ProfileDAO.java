@@ -3,7 +3,9 @@ package org.example.dao;
 import org.example.config.MySQLConnection;
 import org.example.model.Profile;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class ProfileDAO {
 
@@ -37,5 +39,14 @@ public class ProfileDAO {
             );
         }
         return null;
+    }
+
+    public boolean update(Profile profile) throws Exception {
+        String sql = "UPDATE profiles SET bio = ?, location = ? WHERE user_id = ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, profile.getBio());
+        ps.setString(2, profile.getLocation());
+        ps.setInt(3, profile.getUserId());
+        return ps.executeUpdate() > 0;
     }
 }

@@ -8,8 +8,13 @@ public class FollowService {
 
     private final FollowDAO followDAO;
 
-    public FollowService() { this.followDAO = new FollowDAO(); }
-    public FollowService(FollowDAO followDAO) { this.followDAO = followDAO; }
+    public FollowService() {
+        this.followDAO = new FollowDAO();
+    }
+
+    public FollowService(FollowDAO followDAO) {
+        this.followDAO = followDAO;
+    }
 
     public boolean follow(int userId, int targetId) throws Exception {
         if (userId <= 0 || targetId <= 0 || userId == targetId) return false;

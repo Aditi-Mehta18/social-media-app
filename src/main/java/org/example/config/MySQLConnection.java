@@ -11,7 +11,8 @@ public class MySQLConnection {
 
     private static Connection connection;
 
-    private MySQLConnection() {}
+    private MySQLConnection() {
+    }
 
     public static Connection getConnection() {
         try {

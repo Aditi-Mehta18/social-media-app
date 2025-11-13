@@ -14,7 +14,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 public class FeedServiceTest {
@@ -58,11 +59,15 @@ public class FeedServiceTest {
 
         when(likeDAO.countLikes(postId)).thenReturn(3L);
 
-        Comment c1 = new Comment(); c1.setText("nice");
-        Comment c2 = new Comment(); c2.setText("great");
+        Comment c1 = new Comment();
+        c1.setText("nice");
+        Comment c2 = new Comment();
+        c2.setText("great");
         when(commentDAO.findByPostId(postId)).thenReturn(Arrays.asList(c1, c2));
 
-        User author = new User(); author.setUserId(authorId); author.setUsername("author");
+        User author = new User();
+        author.setUserId(authorId);
+        author.setUsername("author");
         when(userDAO.findById(authorId)).thenReturn(author);
 
         FeedService service = new FeedService(followService, postDAO, likeDAO, commentDAO, userDAO);

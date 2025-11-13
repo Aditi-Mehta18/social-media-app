@@ -1,21 +1,274 @@
-2025-11-13 19:35:33,469 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25+36-3489"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@aeab9a1, com.mongodb.Jep395RecordCodecProvider@40f70521, com.mongodb.KotlinCodecProvider@774698ab]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@55342f40]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 19:35:33,488 INFO  [cluster-ClusterId{value='6915e5adcd2a66752430598a', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=27984000}
-2025-11-13 22:27:00,698 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:27:00,721 INFO  [cluster-ClusterId{value='69160ddccb74e233608d8058', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24862100}
-2025-11-13 22:34:21,514 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:34:21,528 INFO  [cluster-ClusterId{value='69160f952fb8445ba2213f1a', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=23839200}
-2025-11-13 22:38:58,055 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:38:58,064 INFO  [cluster-ClusterId{value='691610a9b63a370405ac86d4', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=21347600}
-2025-11-13 22:47:58,037 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:47:58,054 INFO  [cluster-ClusterId{value='691612c5ca138527f18537d8', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=23592100}
-2025-11-13 22:49:04,436 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:49:04,449 INFO  [cluster-ClusterId{value='691613082d79df31c973eae5', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=21425700}
-2025-11-13 22:58:37,521 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37bd68c3, com.mongodb.Jep395RecordCodecProvider@60f7cc1d, com.mongodb.KotlinCodecProvider@11eadcba]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@4721d212]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 22:58:37,532 INFO  [cluster-ClusterId{value='69161545e0f7bd0207a19411', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=22045900}
-2025-11-13 23:11:47,819 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5b11a194, com.mongodb.Jep395RecordCodecProvider@37bd68c3, com.mongodb.KotlinCodecProvider@60f7cc1d]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@11eadcba]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2025-11-13 23:11:47,836 INFO  [cluster-ClusterId{value='6916185bd1b974373a90c48c', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=34812400}
-2025-11-13 23:11:47,847 INFO  [main] org.example.Main : 
+2025-11-14 00:10:15,378 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5b11a194, com.mongodb.Jep395RecordCodecProvider@37bd68c3, com.mongodb.KotlinCodecProvider@60f7cc1d]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@11eadcba]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-11-14 00:10:15,392 INFO  [cluster-ClusterId{value='6916260f161e866bb591cbd9', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24917700}
+2025-11-14 00:10:15,403 INFO  [main] org.example.Main : 
 === SOCIAL MEDIA APP ===
-2025-11-13 23:11:47,847 INFO  [main] org.example.Main : 1. Register
-2025-11-13 23:11:47,847 INFO  [main] org.example.Main : 2. Login
-2025-11-13 23:11:47,847 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:10:15,403 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:10:15,403 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:10:15,403 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:10:42,051 INFO  [main] org.example.Main : Registered successfully. Creating default profile...
+2025-11-14 00:10:42,116 INFO  [main] org.example.Main : Default profile created.
+2025-11-14 00:10:42,117 INFO  [main] org.example.Main : Please login from the main menu.
+2025-11-14 00:10:42,117 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:10:42,117 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:10:42,117 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:10:42,117 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:11:11,910 WARN  [main] org.example.Main : Invalid credentials.
+2025-11-14 00:11:11,910 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:11:11,910 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:11:11,911 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:11:11,911 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:11:33,648 WARN  [main] org.example.Main : Invalid credentials.
+2025-11-14 00:11:33,648 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:11:33,648 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:11:33,648 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:11:33,648 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:12:37,645 WARN  [main] org.example.Main : Invalid credentials.
+2025-11-14 00:12:37,645 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:12:37,645 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:12:37,645 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:12:37,645 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:13:03,316 INFO  [main] org.example.Main : Registered successfully. Creating default profile...
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : Default profile created.
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : Please login from the main menu.
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:13:03,378 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:13:17,205 INFO  [main] org.example.Main : Login successful. Welcome Aditi Mehta
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : Logged in as: Aditi
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 8. View Timeline (Followees)
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 9. Follow a User
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 10. Unfollow a User
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 11. Search Users
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 12. Search Posts
+2025-11-14 00:13:17,207 INFO  [main] org.example.Main : 13. View My Posts
+2025-11-14 00:13:17,208 INFO  [main] org.example.Main : 14. Logout
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : Post created.
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : Logged in as: Aditi
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:13:32,733 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 8. View Timeline (Followees)
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 9. Follow a User
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 10. Unfollow a User
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 11. Search Users
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 12. Search Posts
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 13. View My Posts
+2025-11-14 00:13:32,735 INFO  [main] org.example.Main : 14. Logout
+2025-11-14 00:13:38,263 INFO  [main] org.example.Main : 
+=== FEED ===
+2025-11-14 00:13:38,274 INFO  [main] org.example.Main : 
+Post ID: 691080c7a5ab4615689c6760
+2025-11-14 00:13:38,275 INFO  [main] org.example.Main : User ID: 1
+2025-11-14 00:13:38,275 INFO  [main] org.example.Main : Content: Hello 
+2025-11-14 00:13:38,275 INFO  [main] org.example.Main : Likes: 1
+2025-11-14 00:13:38,275 INFO  [main] org.example.Main : Comments:
+2025-11-14 00:13:38,275 INFO  [main] org.example.Main :  - (2) Nice
+2025-11-14 00:13:38,278 INFO  [main] org.example.Main : 
+Post ID: 6910817ef0de2b5333a68ac7
+2025-11-14 00:13:38,279 INFO  [main] org.example.Main : User ID: 2
+2025-11-14 00:13:38,279 INFO  [main] org.example.Main : Content: Hiiiii !
+2025-11-14 00:13:38,279 INFO  [main] org.example.Main : Likes: 0
+2025-11-14 00:13:38,279 INFO  [main] org.example.Main : Comments:
+2025-11-14 00:13:38,282 INFO  [main] org.example.Main : 
+Post ID: 691611b9b63a370405ac86d5
+2025-11-14 00:13:38,282 INFO  [main] org.example.Main : User ID: 3
+2025-11-14 00:13:38,282 INFO  [main] org.example.Main : Content: Hey ssup!
+2025-11-14 00:13:38,282 INFO  [main] org.example.Main : Likes: 1
+2025-11-14 00:13:38,282 INFO  [main] org.example.Main : Comments:
+2025-11-14 00:13:38,285 INFO  [main] org.example.Main : 
+Post ID: 6916131c2d79df31c973eae6
+2025-11-14 00:13:38,285 INFO  [main] org.example.Main : User ID: 4
+2025-11-14 00:13:38,286 INFO  [main] org.example.Main : Content: Heyyaaaa
+2025-11-14 00:13:38,286 INFO  [main] org.example.Main : Likes: 0
+2025-11-14 00:13:38,286 INFO  [main] org.example.Main : Comments:
+2025-11-14 00:13:38,288 INFO  [main] org.example.Main : 
+Post ID: 691626d4161e866bb591cbda
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : User ID: 7
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : Content: YO, HI!
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : Likes: 0
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : Comments:
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : Logged in as: Aditi
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 8. View Timeline (Followees)
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 9. Follow a User
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 10. Unfollow a User
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 11. Search Users
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 12. Search Posts
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 13. View My Posts
+2025-11-14 00:13:38,289 INFO  [main] org.example.Main : 14. Logout
+2025-11-14 00:14:40,791 INFO  [main] org.example.Main : Liked.
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : Logged in as: Aditi
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 8. View Timeline (Followees)
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 9. Follow a User
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 10. Unfollow a User
+2025-11-14 00:14:40,792 INFO  [main] org.example.Main : 11. Search Users
+2025-11-14 00:14:40,793 INFO  [main] org.example.Main : 12. Search Posts
+2025-11-14 00:14:40,793 INFO  [main] org.example.Main : 13. View My Posts
+2025-11-14 00:14:40,793 INFO  [main] org.example.Main : 14. Logout
+2025-11-14 00:16:24,451 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5b11a194, com.mongodb.Jep395RecordCodecProvider@37bd68c3, com.mongodb.KotlinCodecProvider@60f7cc1d]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@11eadcba]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-11-14 00:16:24,463 INFO  [cluster-ClusterId{value='6916278010913870878d7b91', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=26629000}
+2025-11-14 00:16:24,471 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:16:24,472 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:16:24,472 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:16:24,472 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:28:22,190 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5b11a194, com.mongodb.Jep395RecordCodecProvider@37bd68c3, com.mongodb.KotlinCodecProvider@60f7cc1d]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@11eadcba]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-11-14 00:28:22,203 INFO  [cluster-ClusterId{value='69162a4e3bd11d6c85bc46a3', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=22529100}
+2025-11-14 00:28:22,211 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:28:22,212 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:28:22,212 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:28:22,212 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:28:53,831 INFO  [main] org.example.Main : Registered successfully. Creating default profile...
+2025-11-14 00:28:53,898 INFO  [main] org.example.Main : Default profile created.
+2025-11-14 00:28:53,899 INFO  [main] org.example.Main : Please login from the main menu.
+2025-11-14 00:28:53,899 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:28:53,899 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:28:53,899 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:28:53,899 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:29:16,047 INFO  [main] org.example.Main : Login successful. Welcome Parul pandey
+2025-11-14 00:29:16,048 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:29:16,048 INFO  [main] org.example.Main : Logged in as: Parul
+2025-11-14 00:29:16,048 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 8. Edit Post
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 9. Delete Post
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 10. Trending Tags
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 11. View Posts by Tag
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 12. Save Bookmark
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 13. Unsave Bookmark
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 14. View My Bookmarks
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 15. View Timeline (Followees)
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 16. Follow a User
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 17. Unfollow a User
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 18. Search Users
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 19. Search Posts
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 20. View My Posts
+2025-11-14 00:29:16,049 INFO  [main] org.example.Main : 21. Logout
+2025-11-14 00:32:11,650 INFO  [main] org.mongodb.driver.client : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.1.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5b11a194, com.mongodb.Jep395RecordCodecProvider@37bd68c3, com.mongodb.KotlinCodecProvider@60f7cc1d]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@11eadcba]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-11-14 00:32:11,664 INFO  [cluster-ClusterId{value='69162b33b793db019a80d592', description='null'}-localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=31007000}
+2025-11-14 00:32:11,680 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:32:11,680 INFO  [main] org.example.Main : 1. Register
+2025-11-14 00:32:11,680 INFO  [main] org.example.Main : 2. Login
+2025-11-14 00:32:11,680 INFO  [main] org.example.Main : 3. Exit
+2025-11-14 00:32:25,826 INFO  [main] org.example.Main : Login successful. Welcome Parul pandey
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : Logged in as: Parul
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:32:25,829 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 8. Edit Post
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 9. Delete Post
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 10. Trending Tags
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 11. View Posts by Tag
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 12. Save Bookmark
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 13. Unsave Bookmark
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 14. View My Bookmarks
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 15. View Timeline (Followees)
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 16. Follow a User
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 17. Unfollow a User
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 18. Search Users
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 19. Search Posts
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 20. View My Posts
+2025-11-14 00:32:25,830 INFO  [main] org.example.Main : 21. Logout
+2025-11-14 00:33:07,310 INFO  [main] org.example.MenuExtensions : Profile updated.
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : Logged in as: Parul
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:33:07,310 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 8. Edit Post
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 9. Delete Post
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 10. Trending Tags
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 11. View Posts by Tag
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 12. Save Bookmark
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 13. Unsave Bookmark
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 14. View My Bookmarks
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 15. View Timeline (Followees)
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 16. Follow a User
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 17. Unfollow a User
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 18. Search Users
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 19. Search Posts
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 20. View My Posts
+2025-11-14 00:33:07,311 INFO  [main] org.example.Main : 21. Logout
+2025-11-14 00:33:44,179 INFO  [main] org.example.MenuExtensions : Now following.
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : 
+=== SOCIAL MEDIA APP ===
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : Logged in as: Parul
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : 1. Create Post
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : 2. View Feed (All Posts)
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : 3. Like a Post
+2025-11-14 00:33:44,180 INFO  [main] org.example.Main : 4. Comment on Post
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 5. Create/Update Profile
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 6. My Profile
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 7. View User Profile
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 8. Edit Post
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 9. Delete Post
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 10. Trending Tags
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 11. View Posts by Tag
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 12. Save Bookmark
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 13. Unsave Bookmark
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 14. View My Bookmarks
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 15. View Timeline (Followees)
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 16. Follow a User
+2025-11-14 00:33:44,181 INFO  [main] org.example.Main : 17. Unfollow a User
+2025-11-14 00:33:44,182 INFO  [main] org.example.Main : 18. Search Users
+2025-11-14 00:33:44,182 INFO  [main] org.example.Main : 19. Search Posts
+2025-11-14 00:33:44,182 INFO  [main] org.example.Main : 20. View My Posts
+2025-11-14 00:33:44,182 INFO  [main] org.example.Main : 21. Logout

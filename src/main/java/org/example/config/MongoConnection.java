@@ -17,21 +17,22 @@ public class MongoConnection {
 
     private static MongoClient client;
 
-    private MongoConnection() {}
+    private MongoConnection() {
+    }
 
     public static MongoDatabase getDatabase() {
 
         if (client == null) {
 
             CodecRegistry pojoCodecRegistry = fromRegistries(
-                    MongoClientSettings.getDefaultCodecRegistry(),
-                    fromProviders(PojoCodecProvider.builder().automatic(true).build())
+                MongoClientSettings.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build())
             );
 
             MongoClientSettings settings = MongoClientSettings.builder()
-                    .applyConnectionString(new com.mongodb.ConnectionString(URI))
-                    .codecRegistry(pojoCodecRegistry)
-                    .build();
+                .applyConnectionString(new com.mongodb.ConnectionString(URI))
+                .codecRegistry(pojoCodecRegistry)
+                .build();
 
             client = MongoClients.create(settings);
         }

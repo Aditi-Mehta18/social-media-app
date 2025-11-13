@@ -2,8 +2,8 @@ package org.example.service;
 
 import org.example.dao.UserDAO;
 import org.example.model.User;
-import org.mindrot.jbcrypt.BCrypt;
 import org.example.validation.UserValidator;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class UserService {
 

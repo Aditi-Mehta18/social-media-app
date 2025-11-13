@@ -5,7 +5,7 @@ import org.example.dao.LikeDAO;
 import org.example.model.Like;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class LikeServiceTest {

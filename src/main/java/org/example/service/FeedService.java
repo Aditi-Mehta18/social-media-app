@@ -1,6 +1,5 @@
 package org.example.service;
 
-import org.bson.types.ObjectId;
 import org.example.dao.CommentDAO;
 import org.example.dao.LikeDAO;
 import org.example.dao.PostDAO;

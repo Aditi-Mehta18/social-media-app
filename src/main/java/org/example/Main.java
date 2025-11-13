@@ -1,5 +1,6 @@
 package org.example;
 
+import org.bson.types.ObjectId;
 import org.example.model.*;
 import org.example.service.*;
 import org.bson.types.ObjectId;
@@ -22,9 +23,11 @@ public class Main {
     static PostService postService = new PostService();
     static LikeService likeService = new LikeService();
     static CommentService commentService = new CommentService();
+    static ProfileService profileService = new ProfileService();
     static FollowService followService = new FollowService();
     static FeedService feedService = new FeedService();
     static SearchService searchService = new SearchService();
+    static BookmarkService bookmarkService = new BookmarkService();
 
     static User loggedInUser = null;
 
@@ -40,8 +43,14 @@ public class Main {
 
                 int ch = Integer.parseInt(sc.nextLine());
                 switch (ch) {
-                    case 1 -> { register(); if (loggedInUser != null) authenticatedMenu(); }
-                    case 2 -> { login(); if (loggedInUser != null) authenticatedMenu(); }
+                    case 1 -> {
+                        register();
+                        if (loggedInUser != null) authenticatedMenu();
+                    }
+                    case 2 -> {
+                        login();
+                        if (loggedInUser != null) authenticatedMenu();
+                    }
                     case 3 -> System.exit(0);
                     default -> log.warn("Invalid choice.");
                 }
@@ -59,13 +68,23 @@ public class Main {
             log.info("2. View Feed (All Posts)");
             log.info("3. Like a Post");
             log.info("4. Comment on Post");
-            log.info("5. View Timeline (Followees)");
-            log.info("6. Follow a User");
-            log.info("7. Unfollow a User");
-            log.info("8. Search Users");
-            log.info("9. Search Posts");
-            log.info("10. View My Posts");
-            log.info("11. Logout");
+            log.info("5. Create/Update Profile");
+            log.info("6. My Profile");
+            log.info("7. View User Profile");
+            log.info("8. Edit Post");
+            log.info("9. Delete Post");
+            log.info("10. Trending Tags");
+            log.info("11. View Posts by Tag");
+            log.info("12. Save Bookmark");
+            log.info("13. Unsave Bookmark");
+            log.info("14. View My Bookmarks");
+            log.info("15. View Timeline (Followees)");
+            log.info("16. Follow a User");
+            log.info("17. Unfollow a User");
+            log.info("18. Search Users");
+            log.info("19. Search Posts");
+            log.info("20. View My Posts");
+            log.info("21. Logout");
             System.out.print("Choose: ");
 
             int ch = Integer.parseInt(sc.nextLine());
@@ -74,13 +93,23 @@ public class Main {
                 case 2 -> viewFeed();
                 case 3 -> likePost();
                 case 4 -> commentOnPost();
-                case 5 -> MenuExtensions.viewTimeline(loggedInUser, feedService, likeService, commentService, sc);
-                case 6 -> MenuExtensions.followUser(loggedInUser, followService, sc);
-                case 7 -> MenuExtensions.unfollowUser(loggedInUser, followService, sc);
-                case 8 -> MenuExtensions.searchUsers(searchService, sc);
-                case 9 -> MenuExtensions.searchPosts(searchService, sc);
-                case 10 -> MenuExtensions.viewMyPosts(loggedInUser, postService, likeService, commentService, sc);
-                case 11 -> logout();
+                case 5 -> MenuExtensions.createOrUpdateProfile(loggedInUser, profileService, sc);
+                case 6 -> MenuExtensions.viewMyProfile(loggedInUser, profileService);
+                case 7 -> MenuExtensions.viewUserProfile(profileService, sc);
+                case 8 -> MenuExtensions.editPost(loggedInUser, postService, sc);
+                case 9 -> MenuExtensions.deletePost(loggedInUser, postService, sc);
+                case 10 -> MenuExtensions.trendingTags(postService, sc);
+                case 11 -> MenuExtensions.viewPostsByTag(postService, likeService, commentService, sc);
+                case 12 -> MenuExtensions.saveBookmark(loggedInUser, bookmarkService, sc);
+                case 13 -> MenuExtensions.unsaveBookmark(loggedInUser, bookmarkService, sc);
+                case 14 -> MenuExtensions.viewBookmarks(loggedInUser, bookmarkService, likeService, commentService);
+                case 15 -> MenuExtensions.viewTimeline(loggedInUser, feedService, likeService, commentService, sc);
+                case 16 -> MenuExtensions.followUser(loggedInUser, followService, sc);
+                case 17 -> MenuExtensions.unfollowUser(loggedInUser, followService, sc);
+                case 18 -> MenuExtensions.searchUsers(searchService, sc);
+                case 19 -> MenuExtensions.searchPosts(searchService, sc);
+                case 20 -> MenuExtensions.viewMyPosts(loggedInUser, postService, likeService, commentService, sc);
+                case 21 -> logout();
                 default -> log.warn("Invalid choice.");
             }
         }
@@ -108,7 +137,26 @@ public class Main {
         boolean ok = userService.register(u, pass);
 
         if (ok) {
-            log.info("Registered successfully. Please login from the main menu.");
+            log.info("Registered successfully. Creating default profile...");
+            // Fetch persisted user to get generated user_id
+            User persisted = userService.login(email, pass);
+            if (persisted == null) {
+                log.warn("Registration succeeded but could not load user to create profile.");
+                log.info("Please login from the main menu.");
+                return;
+            }
+            Profile profile = new Profile();
+            profile.setUserId(persisted.getUserId());
+            profile.setBio("");
+            profile.setLocation("");
+            profile.setCreatedAt(new java.sql.Timestamp(System.currentTimeMillis()).toString());
+            try {
+                profileService.createProfile(profile);
+                log.info("Default profile created.");
+            } catch (Exception e) {
+                log.warn("Could not create default profile: {}", e.getMessage());
+            }
+            log.info("Please login from the main menu.");
         } else {
             log.warn("User already exists (email/username).");
         }
@@ -132,7 +180,6 @@ public class Main {
             authenticatedMenu();
         }
     }
-
 
 
     static void createPost() {
